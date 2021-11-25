@@ -8,8 +8,6 @@ import { ModalFooter, ModalHeader } from 'reactstrap';
 import { styled } from '@mui/material/styles';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 
-
-
 function App() {
 
   const url = "https://619a902027827600174452b1.mockapi.io/productos/";
