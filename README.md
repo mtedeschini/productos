@@ -10,6 +10,9 @@ Axios
 
 Reactstrap
 
+## Available Scripts
+
+In the project directory, you can run:
 App disponible en https://matiastedeschini.com.ar/productos
 
 
