@@ -110,21 +110,21 @@ function App() {
     console.log(productoSelec)
   }
 
-  const handleChangeBusqueda = e =>{
+  const handleChangeBusqueda = e => {
     setBusqueda(e.target.value);
     filtrar(e.target.value);
     console.log(e.target.value);
     console.log(productos);
   }
 
-  const filtrar = (palabraBuscada) =>{
-    var resultadoBusqueda = grillaProductos.filter((elemento) =>{
-      if(elemento.nombre.toString().toLowerCase().includes(palabraBuscada.toLowerCase())
-      || elemento.descripcion.toString().toLowerCase().includes(palabraBuscada.toLowerCase())
-      || elemento.precio.toString().toLowerCase().includes(palabraBuscada.toLowerCase())
-      || elemento.cantidad.toString().toLowerCase().includes(palabraBuscada.toLowerCase())
-      || elemento.id.toString().toLowerCase().includes(palabraBuscada.toLowerCase()))
-      {return elemento;
+  const filtrar = (palabraBuscada) => {
+    var resultadoBusqueda = grillaProductos.filter((elemento) => {
+      if (elemento.nombre.toString().toLowerCase().includes(palabraBuscada.toLowerCase())
+        || elemento.descripcion.toString().toLowerCase().includes(palabraBuscada.toLowerCase())
+        || elemento.precio.toString().toLowerCase().includes(palabraBuscada.toLowerCase())
+        || elemento.cantidad.toString().toLowerCase().includes(palabraBuscada.toLowerCase())
+        || elemento.id.toString().toLowerCase().includes(palabraBuscada.toLowerCase())) {
+        return elemento;
       }
     });
     setProductos(resultadoBusqueda);
@@ -212,16 +212,16 @@ function App() {
 
 
         {/* Tabla */}
-        <div className="prueba row align-items-center" >
-          <div className="col-6 ">
+        <div className="nav row align-items-center" >
+          <div className="col-md-6 col-12">
             <h1 className="text-center "> Listado de Productos </h1>
           </div>
-          <div className="col-3 align-items-center">
+          <div className="col-md-3 col-12 align-items-center">
             <Button startIcon={<AddBoxIcon />} variant="contained" color="success" onClick={() => abrirModalInsertar()} > Agregar Producto</Button>
           </div>
-          <div className="col-3 align-items-center pb-1">
+          <div className="col-md-3 col-12 align-items-center pb-1">
             <TextField
-              onChange={(e)=>handleChangeBusqueda(e)}
+              onChange={(e) => handleChangeBusqueda(e)}
               id="buscar"
               value={busqueda}
               InputProps={{

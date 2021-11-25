@@ -18,9 +18,9 @@ code {
     monospace;
 }
 
-.prueba{
+.nav{
   background-color: rgb(167, 167, 167); 
-  height: 100px;
+  min-height: 100px;
   border-bottom: 1px white solid;
   color:rgb(24, 24, 24);
   padding-left: 10px;
